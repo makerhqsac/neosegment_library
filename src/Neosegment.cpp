@@ -20,6 +20,7 @@ void Neosegment::drawNumber(uint32_t n, uint32_t c) {
 void Neosegment::drawNumber(uint32_t n, uint16_t o, uint32_t c) {
 	String numStr = String(n, DEC);
 	uint16_t len = numStr.length();
+	clear();
 	for (uint16_t i = 0; i < len; i++) {
 		uint8_t digit = numStr.charAt(len-i-1) - '0';
 		drawDigit(digitMap[digit], o+(i*7), c);
